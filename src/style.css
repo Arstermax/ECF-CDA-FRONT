@@ -4,11 +4,22 @@
   --Text-Sous-Titre: 1.5rem;
   --Text: 0.8rem;
   /* Colors */
-  --Arrière-Plan: #fff;
-  --Arrière-Plan-Subtile: #fff;
+  --Arriere-Plan: #F2FAFB;
+  --Arriere-Plan-Subtile: #F4FAFF;
 
-  --Text-color: #d61818;
-  --Text-color-subtil: #2e2c2c;
+  --Arriere-Plan-composent : #E6F4FE;
+  --Arriere-Plan-composent-hover : #D5EFFF;
+  --Arriere-Plan-composent-selection : #C2E5FF;
+
+  --Border-Subtil : #ACD8FC;
+  --Border : #8EC8F6;
+  --Border-Strong : #5EB1EF;
+
+  --Arriere-Plan-Block: #0090FF;
+  --Arriere-Plan-Block-hover: #0588F0;
+  
+  --Text-color: #0D74CE;
+  --Text-color-subtil: #113264;
 
 }
 
@@ -17,7 +28,7 @@
   padding: 0;
   box-sizing: border-box;
   font-size: var(--Text);
-  color: var(--Text-color-subtil);
+  color: var(--Text-color);
   font-family: Arial, Helvetica, sans-serif;
 }
 
