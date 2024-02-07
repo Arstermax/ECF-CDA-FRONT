@@ -1,79 +1,65 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  /* Text */
+  --Text-Titre: 2rem;
+  --Text-Sous-Titre: 1.5rem;
+  --Text: 0.8rem;
+  /* Colors */
+  --Arrière-Plan: #fff;
+  --Arrière-Plan-Subtile: #fff;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  --Text-color: #d61818;
+  --Text-color-subtil: #2e2c2c;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+* {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: var(--Text);
+  color: var(--Text-color-subtil);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: var(--Text-Titre);
+  color: var(--Text-color);
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+h2 {
+  font-size: var(--Text-Sous-Titre);
+  color: var(--Text-color);
 }
 
-.card {
-  padding: 2em;
-}
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-@media (prefers-color-scheme: light) {
+/* Ecran Tablette */
+@media screen and (min-width:426px) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    --Text-Titre: 2.3rem;
+    --Text-Sous-Titre: 1.8rem;
+    --Text: 1rem;
   }
-  a:hover {
-    color: #747bff;
+}
+/* Ecran Laptop */
+@media screen and (min-width:769px) {
+  :root {
+    --Text-Titre: 2.5rem;
+    --Text-Sous-Titre: 2rem;
+    --Text:  1.3rem;
   }
-  button {
-    background-color: #f9f9f9;
+}
+/* Ecran Ordinateur */
+@media screen and (min-width:1025px) {
+  :root {
+    --Text-Titre: 2.8rem;
+    --Text-Sous-Titre: 2.3rem;
+    --Text: 1.5rem;
+  }
+}
+/* Ecran Grand */
+@media screen and (min-width:1441px) {
+  :root {
+    --Text-Titre: 3rem;
+    --Text-Sous-Titre: 2.5rem;
+    --Text: 1.8rem;
   }
 }
