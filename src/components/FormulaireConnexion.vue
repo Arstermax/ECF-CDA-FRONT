@@ -7,9 +7,8 @@ const [data, setData] = defineModel({
 })
 
 const handleSubmit = (e) => {
-    console.log(e);
+    console.log(data.email);
 }
-
 </script>
 
 <template>
@@ -18,7 +17,7 @@ const handleSubmit = (e) => {
             <legend>
                 <label for="email">Email</label>
             </legend>
-            <input type="email" name="email" id="email" required placeholder="JohnDoe@gmail.com" >
+            <input type="email" name="email" id="email" required @change="(e) => setData({email : e.target.value})" placeholder="JohnDoe@gmail.com" >
         </fieldset>
         <fieldset>
             <legend>

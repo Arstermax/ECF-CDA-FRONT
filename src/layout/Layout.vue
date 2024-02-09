@@ -1,55 +1,138 @@
 <script setup>
+
 </script>
 
 <template>
-    <header>
-        <hgroup>
-            <RouterLink :to="'/'">
-                <h1>ProjectTools</h1>
-            </RouterLink>
-        </hgroup>
-        <nav>
-            <ul>
-                <li>
-                    <RouterLink :to="'/log'">
-                        <img src="../assets/svg/icon-inscription.svg" alt="">
-                    </RouterLink>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <router-view></router-view>
-    <footer>
-        <h2>Copyright 2024 ProjectTools</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias id quo atque velit aspernatur reprehenderit quibusdam quisquam! Quis dignissimos dolore hic magni velit cupiditate veritatis.</p>
-    </footer>
+    <div id="layout">
+        <header>
+            <hgroup>
+                <RouterLink :to="'/'">
+                    Home
+                </RouterLink>
+                <hr>
+            </hgroup>
+            <nav>
+                <ul>
+                    <li>
+                        <RouterLink :to="'/log'">
+                            <div class="profils">
+                                <img src="../assets/svg/icon-inscription.svg" alt="">
+                            </div>
+                        </RouterLink>
+                        <RouterLink :to="'/profils'">
+                            <div class="tache parametre">
+                                <img src="../assets/svg/icon-parametre.svg" alt="">
+                                <p>Paramètre </p>
+                            </div>
+                        </RouterLink>
+                        <hr>
+                    </li>
+                    <li>
+                        <RouterLink :to="'/'">
+                            <div class="tache element">
+                                <img src="../assets/svg/icon-projet.svg" alt="">
+                                <p>Projet</p>
+                            </div>
+                        </RouterLink>
+                    </li>
+                    <hr>
+                    <li>
+                        <RouterLink :to="'/'">
+                            <div class="tache ">
+                                <img src="../assets/svg/icon-deconnecter.svg" alt="">
+                                <p>Se déconnecter</p>
+                            </div>
+                        </RouterLink>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <router-view></router-view>
+        </section>
+    </div>
 </template>
 
 <style scoped>
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2rem;
-
-    height: 8vh;
-    background-color: var(--Arriere-Plan-Block);
-    border-bottom: 0.2rem solid var(--Border-Strong);
+hr {
+    margin: 0.3rem 0.5rem;
 }
 
-footer {
-    padding: 0 5rem;
+#layout {
     display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 25vh;
+    justify-content: space-between;
+    min-height: 100vh;
+    max-width: 100vw;
 
-    background-color: var(--Arriere-Plan-Block);
+    & header {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+        width: 15vw;
+        height: 100vh;
+        background-color: var(--Arriere-Plan-Block);
 
-    & p{
-        margin: 1rem;
+        & hgroup {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 13vw;
+            padding: 0.2rem 0;
+            & hr{
+                width: 50%;
+            }
+        }
+
+        & nav {
+            & ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+        }
+
+    }
+
+    & section {
+        width: 90vw;
+    }
+
+    .profils {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+
+        & img {
+            border: 0.15rem solid;
+            padding: 0.8rem;
+            border-radius: 50%;
+        }
+    }
+
+    .tache {
+
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        width: 15vw;
+        padding: 0.1rem 0.2rem;
+
+        & img {
+            width: 1rem;
+            margin: 0 0.3rem;
+        }
+    }
+
+    .element {
+        align-items: start;
+        height: 56vh;
+        margin: 1rem 0;
+    }
+    .parametre{
+        justify-content: center;
     }
 }
 </style>

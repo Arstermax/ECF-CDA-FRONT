@@ -65,9 +65,9 @@ main{
 /* Ecran Laptop */
 @media screen and (min-width:769px) {
   :root {
-    --Text-Titre: 2.5rem;
-    --Text-Sous-Titre: 2rem;
-    --Text:  1.3rem;
+    --Text-Titre: 2.3rem;
+    --Text-Sous-Titre: 1.5rem;
+    --Text:  1.15rem;
   }
 }
 /* Ecran Ordinateur */
@@ -75,14 +75,6 @@ main{
   :root {
     --Text-Titre: 2.8rem;
     --Text-Sous-Titre: 2.3rem;
-    --Text: 1.5rem;
-  }
-}
-/* Ecran Grand */
-@media screen and (min-width:1441px) {
-  :root {
-    --Text-Titre: 3rem;
-    --Text-Sous-Titre: 2.5rem;
-    --Text: 1.8rem;
+    --Text: 1.1rem;
   }
 }

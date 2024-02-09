@@ -4,12 +4,12 @@ import HomePage from "./views/HomePage.vue"
 import Layout from "./layout/Layout.vue"
 import NotFound from "./views/NotFound.vue"
 import LogPage from "./views/LogPage.vue"
-import   {createRouter, createWebHashHistory} from 'vue-router'
+import   {createRouter, createWebHistory} from 'vue-router'
 import App from './App.vue'
 
 
 const router = createRouter({
-    history : createWebHashHistory(),
+    history : createWebHistory(),
     routes : [
         {
             path : "/",
@@ -23,7 +23,24 @@ const router = createRouter({
                 {
                     path : "/log",
                     component : LogPage
+                },
+                {
+                    path : "/profil",
+                    component : LogPage
+                },
+                {
+                    path : "/projet",
+                    component : LogPage
+                },
+                {
+                    path : "/projet/:id_projet",
+                    component : LogPage
+                },
+                {
+                    path : "/projet/:id_projet/tache/:id_tache",
+                    component : LogPage
                 }
+
             ]
         },
         {
